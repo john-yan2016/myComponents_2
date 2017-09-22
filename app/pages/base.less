@@ -1,0 +1,202 @@
+.base {
+.content-width {
+    // width: 120rem;
+    // min-width: 120rem;
+    //max-width: 100rem;
+  margin: 0 auto;
+  max-width:1250px;
+}
+
+.header {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    // background: url(../styles/images/bg-3.png);
+    background-position: center -50px;
+    padding: 2rem 3rem;
+    .header_top {
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: space-between;
+        vertical-align: middle;
+        text-align:justify;
+    }
+    .logo-box {
+        display: inline-block;
+        vertical-align: top;
+        width: (358/1920)*100%;
+        white-space: nowrap;
+        a {
+            display: block;
+        }
+        .logoImg {
+            margin-right: 7px;
+            vertical-align: top;
+            width: 12%;
+            height: 100%;
+            max-height: 37px;
+            max-width: 37px;
+        }
+        .textImg {
+            vertical-align: top;
+            width: 85%;
+            max-width: 260px;
+            height: 100%;
+        }
+    }
+    .nav-box {
+        // margin-left: -2%;
+        // padding: 0.5rem 0rem;
+        display: inline-block;
+        vertical-align: top;
+        width: (883/1920)*100%;
+        height: 100%;
+        max-height: 40px;
+        // max-height: 43px;
+        white-space: nowrap;
+        overflow: hidden;
+        ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            margin: 0 1.5%;
+            &:hover {
+                border-bottom: 4px solid #4e90ff;
+                padding-bottom: 1rem;
+                span {
+                    color: #4e90ff;
+                }
+            }
+            span {
+                cursor: pointer;
+                // height: 4.3rem;
+                font-size: 1.6rem;
+                text-align: center;
+                letter-spacing: -.1rem;
+                color: white;
+                // &:hover {
+                //     color: #4e90ff;
+                // }
+            }
+        }
+        .active {
+            border-bottom: 4px solid #fff;
+            padding-bottom: 1rem;
+        }
+        }
+    }
+    .search-box {
+        display: inline-block;
+        vertical-align: middle;
+        width: (500/1920)*100%;
+        white-space: nowrap;
+        // margin-right: -2.5%;
+       .basesearch {
+        input {
+            font-size: 12px;
+            width: 80%;
+            height: 2.5rem;
+            padding-left: 1rem;
+            background-color: #020f38;
+            color: #fff;
+            border: 1px solid #4e90ff;
+        }
+        input::-webkit-input-placeholder{
+             color: #4e90ff;
+             opacity:0.8;
+        }
+        input:focus{
+            color:#fff;
+        }
+        img {
+            width: 20%;
+            max-width: 55px;
+            height: 2.5rem;
+            margin-left: -7px;
+        &:hover {
+            cursor: pointer;
+        }
+        }
+        }
+    }
+    .login-box {
+        display: inline-block;
+        vertical-align: middle;
+        width: (100/1920)*100%;
+        height: 100%;
+        white-space: nowrap;
+        max-width: 65px;
+        // padding: 0.5rem 0rem;
+        // width: 12.5%;
+        font-size: 1.4rem;
+        // text-align: right;
+        // .register {
+        //     margin-left: 15%;
+        // }
+        // display: inline-flex;
+        // justify-content: space-between;
+        // align-items: center;
+        text-align: justify;
+        a {
+            display: inline-block;
+            &:first-child {
+                margin-right: 15px;
+            }
+            i {
+                font-size: 2.2rem;
+                color: #fff;
+            }
+            // span {
+            //     color: white;
+            //     font-size: 1.4rem;
+            // }
+            &:hover >i, &:hover >span {
+                color: #4e90ff;
+            }
+            // transition: all 0s linear;
+        }
+    }
+}
+.news-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 4rem;
+    padding: 0.3rem 0rem;
+    background-color: rgba(5,68,129,0.5);
+    color: white;
+    text-align: center;
+    i {
+    font-size: 2.3rem;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+    }
+    span {
+    display: inline-block;
+    font-size: 1.4rem;
+    }
+    .newData{
+    font-size: 1.8rem;
+    margin: 0rem .2rem;
+    }
+}
+.content {
+  background: url(../styles/images/bg-2.png);
+  background-position: top center;
+  background-size: cover;
+  background-origin:border-box;
+  background-repeat:no-repeat;
+  background-attachment: scroll;
+  width: 100%;
+  .hiddenWord{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+}
+/* 个人用户页面下拉框，日期选择框飘出框架的问题修改antd全局属性，by周叶 */
+.ant-select-dropdown,.ant-calendar-picker-container,.ant-dropdown{
+  z-index: 2!important;
+}
