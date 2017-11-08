@@ -20,8 +20,8 @@ export default class Frame extends Component {
   render() {
     return (
       <div className="frame">
+        这是主页
         {this.props.children}
-        test
       </div>
     );
   }
